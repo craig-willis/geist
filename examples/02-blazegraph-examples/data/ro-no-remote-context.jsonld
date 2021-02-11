@@ -1,0 +1,34 @@
+{
+  "@context": [
+    {
+	"CreativeWork": "http://schema.org/CreativeWork",  
+	"Dataset": "http://schema.org/Dataset",  
+	"File": "http://schema.org/MediaObject",
+        "hasPart": "http://schema.org/hasPart"
+    },
+    {
+	"@base": "arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork"
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "data1.txt"
+        }
+      ],
+      "name": "Example RO-Crate"
+    },
+    {
+      "@id": "data1.txt",
+      "@type": "File",
+      "description": "One of hopefully many Data Entities"
+    }
+  ]
+}

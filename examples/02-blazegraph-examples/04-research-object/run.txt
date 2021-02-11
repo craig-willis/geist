@@ -1,0 +1,92 @@
+
+******************************************* EXAMPLE SETUP ************************************************
+
+# INITIALIZE BLAZEGRAPH INSTANCE WITH RO WITH BASE URI
+
+blazegraph destroy --dataset kb
+blazegraph create --dataset kb
+blazegraph import --file ../data/ro-with-base-uri.jsonld --format jsonld
+
+------------------------------------------- SETUP OUTPUTS ------------------------------------------------
+
+
+
+******************************************* EXAMPLE S1 ************************************************
+
+# EXPORT RO WITH BASE URI
+
+blazegraph export 
+
+------------------------------------------- S1 OUTPUTS ------------------------------------------------
+
+<http://127.0.0.1:9999/blazegraph/> <http://schema.org/description> "The RO-Crate Root Data Entity"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://127.0.0.1:9999/blazegraph/> <http://schema.org/hasPart> <http://127.0.0.1:9999/blazegraph/data1.txt> .
+<http://127.0.0.1:9999/blazegraph/> <http://schema.org/hasPart> <http://127.0.0.1:9999/blazegraph/subfolder/> .
+<http://127.0.0.1:9999/blazegraph/> <http://schema.org/name> "Example RO-Crate"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://127.0.0.1:9999/blazegraph/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<http://127.0.0.1:9999/blazegraph/data1.txt> <http://schema.org/description> "One of hopefully many Data Entities"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://127.0.0.1:9999/blazegraph/data1.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/MediaObject> .
+<http://127.0.0.1:9999/blazegraph/ro-crate-metadata.json> <http://purl.org/dc/terms/conformsTo> <https://w3id.org/ro/crate/1.1> .
+<http://127.0.0.1:9999/blazegraph/ro-crate-metadata.json> <http://schema.org/about> <http://127.0.0.1:9999/blazegraph/> .
+<http://127.0.0.1:9999/blazegraph/ro-crate-metadata.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CreativeWork> .
+<http://127.0.0.1:9999/blazegraph/subfolder/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+
+
+******************************************* EXAMPLE SETUP ************************************************
+
+# INITIALIZE BLAZEGRAPH INSTANCE WITH RO NO BASE URI
+
+blazegraph destroy --dataset kb
+blazegraph create --dataset kb
+blazegraph import --file ../data/ro-no-base.jsonld --format jsonld
+
+------------------------------------------- SETUP OUTPUTS ------------------------------------------------
+
+
+
+******************************************* EXAMPLE S1 ************************************************
+
+# EXPORT RO NO BASE URI
+
+blazegraph export 
+
+------------------------------------------- S1 OUTPUTS ------------------------------------------------
+
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/> <http://schema.org/description> "The RO-Crate Root Data Entity"^^<http://www.w3.org/2001/XMLSchema#string> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/> <http://schema.org/hasPart> <arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/data1.txt> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/> <http://schema.org/hasPart> <arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/subfolder/> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/> <http://schema.org/name> "Example RO-Crate"^^<http://www.w3.org/2001/XMLSchema#string> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/data1.txt> <http://schema.org/description> "One of hopefully many Data Entities"^^<http://www.w3.org/2001/XMLSchema#string> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/data1.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/MediaObject> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/ro-crate-metadata.json> <http://purl.org/dc/terms/conformsTo> <https://w3id.org/ro/crate/1.1> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/ro-crate-metadata.json> <http://schema.org/about> <arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/ro-crate-metadata.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CreativeWork> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/subfolder/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+
+
+******************************************* EXAMPLE SETUP ************************************************
+
+# INITIALIZE BLAZEGRAPH INSTANCE WITH RO NO REMOTE CONTEXT
+
+blazegraph destroy --dataset kb
+blazegraph create --dataset kb
+blazegraph import --file ../data/ro-no-remote-context.jsonld --format jsonld
+
+------------------------------------------- SETUP OUTPUTS ------------------------------------------------
+
+
+
+******************************************* EXAMPLE S1 ************************************************
+
+# EXPORT RO NO REMOTE CONTEXT
+
+blazegraph export 
+
+------------------------------------------- S1 OUTPUTS ------------------------------------------------
+
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/> <http://schema.org/hasPart> <arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/data1.txt> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/data1.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/MediaObject> .
+<arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/ro-crate-metadata.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CreativeWork> .
+

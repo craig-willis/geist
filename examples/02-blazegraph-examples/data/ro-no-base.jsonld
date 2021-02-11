@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context"
+  ],
+  "@graph": [
+    {
+      "@id": "arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/"
+      }
+    },
+    {
+      "@id": "arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/",
+      "@type": "Dataset",
+      "description": "The RO-Crate Root Data Entity",
+      "hasPart": [
+        {
+          "@id": "arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/data1.txt"
+        },
+        {
+          "@id": "arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/subfolder/"
+        }
+      ],
+      "name": "Example RO-Crate"
+    },
+    {
+      "@id": "arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/data1.txt",
+      "@type": "File",
+      "description": "One of hopefully many Data Entities"
+    },
+    {
+      "@id": "arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/subfolder/",
+      "@type": "Dataset"
+    }
+  ]
+}
